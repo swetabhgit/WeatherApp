@@ -1,0 +1,35 @@
+<html>
+    <head>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+            <!-- jQuery library -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            
+            <!-- Popper JS -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+            
+            <!-- Latest compiled JavaScript -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+        </head>
+        <body>
+            <div class="row select-dropdown"> 
+                <div class="col-sm-12">
+                        <div class="dropdown">
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                  Select your City
+                                </button>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="#">Ranchi</a>
+                                  <a class="dropdown-item" href="#">Patna</a>
+                                  <a class="dropdown-item" href="#">Chennai</a>
+                                </div>
+                              </div>
+                </div>
+            </div>
+            <div>
+            <p>temperaute of<span> <%=city%> </span>  <%= temp %></p>
+            <p>press of <%= press %></p>
+            </div>
+            </body>
+    </html>
