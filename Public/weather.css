@@ -1,17 +1,15 @@
 body{
     overflow:hidden;
+    background-size:100%;
     }
     .select-dropdown{
-        position: absolute;
-        top: 0px;
-        bottom: 0px;
-        left: 0px;
-        right: 0;
-        bottom: 0px;
-        height: 40px;
-        margin: auto;
-        display: block;
-        width: 196px;
+        position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 20px;
+    width: 186px;
+        
     }
     .btn{
         background-image: linear-gradient(to bottom,rgba(0,0,0,0.6),rgba(255,255,255,0.1));
@@ -30,5 +28,52 @@ body{
     }
    .heading h1{
      font-size:54px;
-
    }
+   .weatherCard{
+    width: 500px;
+    height: 119px;
+    background-color: rgba(0,0,0,0.3);
+    border: none;
+    border-radius: 16px;
+    position: relative;
+    left: 0;
+    display: flex;
+    padding: 25px;
+    right: 0;
+    margin: auto;
+    justify-content: center;
+}
+.text{
+ padding-right:20px;
+ color:white;
+ font-size:24px;
+ position: relative;
+ bottom: -44px;
+ height: 36px;
+}
+.vertical-line{
+    background-color: white;
+    height: 100%;
+    width: 2px;    
+}
+.day{
+    display: flex;
+    flex-direction:column;
+    padding-left:20px
+}
+.day .text{
+    bottom: 0;
+    height:50px;
+}
+.logo{
+    background-size: 100px;
+    display: block;
+    position: absolute;
+    height: 67px;
+    background-repeat: no-repeat;
+    width: 85px;
+    background-position-x: -6px;
+    background-image: url(/Icons/animated/snowy-1.svg);
+    top: 0px;
+    
+}

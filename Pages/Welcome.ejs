@@ -20,6 +20,18 @@
              <div class="heading">
                     <h1>Weather Now </h1>
                 </div>
+                <div class="weatherCard">
+                    <div class="logo-container"><div class="logo">
+                        </div>
+                        <div class="status text"><p>Snow</p></div>
+                    </div>
+                        <div class="temp text"><p>7</p></div>
+                        <div class="press text"><p>345mph</p></div>
+                        <div class="vertical-line">
+                            </div>
+                            <div class="day"><div class="text">Mon</div> <div class="range text">7/15</div>
+                        </div>
+                        </div>
             <div class="row select-dropdown"> 
                 <div class="col-sm-12">
                         <div class="dropdown">
@@ -27,15 +39,36 @@
                                   Select your City
                                 </button>
                                 <div class="dropdown-menu">
-                                  <a class="dropdown-item" href="#">Ranchi</a>
-                                  <a class="dropdown-item" href="#">Patna</a>
-                                  <a class="dropdown-item" href="#">Chennai</a>
+                                  <a class="dropdown-item"  onclick="myfunction('ranchi')">Ranchi</a>
+                                  <a class="dropdown-item" onclick="myfunction('patna')">Patna</a>
+                                  <a class="dropdown-item" onclick="myfunction('chennai')">Chennai</a>
+                                  <a class="dropdown-item" onclick="myfunction('Hazaribagh')">hazaribagh</a>
                                 </div>
                               </div>
                 </div>
             </div>
+            
+         
+            
             <div>
 
             </div>
+            <script>
+             function myfunction(x){
+             $.get(`/weather/${x}`,function(data){
+                 $('.temp p').empty();
+               $('.temp p').append((data.temp-273.15).toFixed(2)+"&deg;C");
+               //alert(data.temp);
+               $('.press p').empty();
+               $('.press p').append(data.press+"hpa");
+               $('.day .range').empty();
+               $('.day .range').append(`${(data.temp_min-273.15).toFixed(2)}&deg; / ${(data.temp_max-273.15).toFixed(2)}&deg;`)
+               $('.status').empty();
+               $('.status').append(data.status);
+               $('.logo').empty();
+               $('.logo').css('background-image','url("http://openweathermap.org/img/w/'+data.icon+'.png")')
+             })            
+             }
+            </script>
             </body>
     </html>
